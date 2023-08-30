@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Essay Recollection | ess.ai</title>
+    <meta name="description" content="This is my essay memory typer. Good luck." />
+    <link rel="stylesheet" href="style.css" />
+    <link id="wordList" rel="stylesheet" href="wordLists/light.css" />
+  </head>
+  <body>
+    <h2 id="header">Ess<span style="color:purple;">a</span>i</h2>
+    <div id="command-center" class="">
+      <div class="bar">
+        <div id="left-wing">
+            <span id="source" tabindex="1" onclick="showTextChange();">Change Source</span>
+        </div>
+        <div id="right-wing">TIME: <span id="hour">XX</span>:<span id="min">XX</span>:<span id="sec">XX</span></div>
+      </div>
+      <div id="typing-area">
+        <div id="text-display"></div>
+        <div class="bar">
+          <input id="input-field" disabled type="text" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" tabindex="2"/>
+          <button id="redo-button" onclick="setText(event)" tabindex="3">redo</button>
+        </div>
+      </div>
+    </div>
+    <div id="wordList-center" class="hidden">
+      <div class="bar">
+        <div id="left-wing" onClick="hideTextChange();">&lt; back</div>
+        <div id="right-wing"><input type="checkbox" id="toggleWarn" name="toggleWarn"><label for="toggleWarn">Mistake Hints</label></div>
+      </div>
+      <div id="wordList-area">
+        <div class="bar">
+          <textarea id="textInput" type="textarea" rows=15 spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+          <button id="submit" onclick="setWordList(textInput.value);" tabindex="3">submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <a href="https://doctormod.sytes.net" target="_blank" tabindex="4">Check Out More of My Stuff</a>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
